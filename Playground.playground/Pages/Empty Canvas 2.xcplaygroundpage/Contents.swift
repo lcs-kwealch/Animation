@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 1000
+let preferredHeight = 700
 /*:
  ## Required code
  
@@ -57,13 +57,18 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  */
 
 // Begin writing your code below (you can remove the examples shown)
-
+func MovePen() {
+    p.goto(dx: -20, dy: -20)
+}
 // Go back to origin
 p.goToOrigin()
 
 //Start Optical Illusion in Middle
 canvas.drawEllipse(at: Point(x: 0, y: 0), width: 12, height: 12)
+
 p.goto(dx: -20, dy: -20)
+
+//Square 1
 p.addLine(distance: 40)
 p.turn(degrees: 90)
 p.addLine(distance: 40)
@@ -71,6 +76,106 @@ p.turn(degrees: 90)
 p.addLine(distance: 40)
 p.turn(degrees: 90)
 p.addLine(distance: 40)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 2
+p.addLine(distance: 80)
+p.turn(degrees: 90)
+p.addLine(distance: 80)
+p.turn(degrees: 90)
+p.addLine(distance: 80)
+p.turn(degrees: 90)
+p.addLine(distance: 80)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 3
+p.addLine(distance: 120)
+p.turn(degrees: 90)
+p.addLine(distance: 120)
+p.turn(degrees: 90)
+p.addLine(distance: 120)
+p.turn(degrees: 90)
+p.addLine(distance: 120)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 4
+p.addLine(distance: 160)
+p.turn(degrees: 90)
+p.addLine(distance: 160)
+p.turn(degrees: 90)
+p.addLine(distance: 160)
+p.turn(degrees: 90)
+p.addLine(distance: 160)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 5
+p.addLine(distance: 200)
+p.turn(degrees: 90)
+p.addLine(distance: 200)
+p.turn(degrees: 90)
+p.addLine(distance: 200)
+p.turn(degrees: 90)
+p.addLine(distance: 200)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 6
+p.addLine(distance: 240)
+p.turn(degrees: 90)
+p.addLine(distance: 240)
+p.turn(degrees: 90)
+p.addLine(distance: 240)
+p.turn(degrees: 90)
+p.addLine(distance: 240)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 7
+p.addLine(distance: 280)
+p.turn(degrees: 90)
+p.addLine(distance: 280)
+p.turn(degrees: 90)
+p.addLine(distance: 280)
+p.turn(degrees: 90)
+p.addLine(distance: 280)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 8
+p.addLine(distance: 320)
+p.turn(degrees: 90)
+p.addLine(distance: 320)
+p.turn(degrees: 90)
+p.addLine(distance: 320)
+p.turn(degrees: 90)
+p.addLine(distance: 320)
+p.turn(degrees: 90)
+
+MovePen()
+
+//Square 9
+p.addLine(distance: 360)
+p.turn(degrees: 90)
+p.addLine(distance: 360)
+p.turn(degrees: 90)
+p.addLine(distance: 360)
+p.turn(degrees: 90)
+p.addLine(distance: 360)
+p.turn(degrees: 90)
+
+
+
 
 /*:
  ## Show the Live View
