@@ -64,119 +64,147 @@ func MovePen() {
 p.goToOrigin()
 
 //Start Optical Illusion in Middle
-canvas.drawEllipse(at: Point(x: 0, y: 0), width: 12, height: 12)
+canvas.drawEllipse(at: Point(x: 0, y: 0), width: 15, height: 15)
 
 p.goto(dx: -20, dy: -20)
 
 //Square 1
-p.addLine(distance: 40)
-p.turn(degrees: 90)
-p.addLine(distance: 40)
-p.turn(degrees: 90)
-p.addLine(distance: 40)
-p.turn(degrees: 90)
-p.addLine(distance: 40)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 40)
+    p.turn(degrees: 90)
+}
 
 MovePen()
 
 //Square 2
-p.addLine(distance: 80)
-p.turn(degrees: 90)
-p.addLine(distance: 80)
-p.turn(degrees: 90)
-p.addLine(distance: 80)
-p.turn(degrees: 90)
-p.addLine(distance: 80)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 80)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 3
-p.addLine(distance: 120)
-p.turn(degrees: 90)
-p.addLine(distance: 120)
-p.turn(degrees: 90)
-p.addLine(distance: 120)
-p.turn(degrees: 90)
-p.addLine(distance: 120)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 120)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 4
-p.addLine(distance: 160)
-p.turn(degrees: 90)
-p.addLine(distance: 160)
-p.turn(degrees: 90)
-p.addLine(distance: 160)
-p.turn(degrees: 90)
-p.addLine(distance: 160)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 160)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 5
-p.addLine(distance: 200)
-p.turn(degrees: 90)
-p.addLine(distance: 200)
-p.turn(degrees: 90)
-p.addLine(distance: 200)
-p.turn(degrees: 90)
-p.addLine(distance: 200)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 200)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 6
-p.addLine(distance: 240)
-p.turn(degrees: 90)
-p.addLine(distance: 240)
-p.turn(degrees: 90)
-p.addLine(distance: 240)
-p.turn(degrees: 90)
-p.addLine(distance: 240)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 240)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 7
-p.addLine(distance: 280)
-p.turn(degrees: 90)
-p.addLine(distance: 280)
-p.turn(degrees: 90)
-p.addLine(distance: 280)
-p.turn(degrees: 90)
-p.addLine(distance: 280)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 280)
+    p.turn(degrees: 90)
+    
+}
 
 MovePen()
 
 //Square 8
-p.addLine(distance: 320)
-p.turn(degrees: 90)
-p.addLine(distance: 320)
-p.turn(degrees: 90)
-p.addLine(distance: 320)
-p.turn(degrees: 90)
-p.addLine(distance: 320)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 320)
+    p.turn(degrees: 90)
+    
+}
+
 
 MovePen()
 
 //Square 9
-p.addLine(distance: 360)
-p.turn(degrees: 90)
-p.addLine(distance: 360)
-p.turn(degrees: 90)
-p.addLine(distance: 360)
-p.turn(degrees: 90)
-p.addLine(distance: 360)
-p.turn(degrees: 90)
+for i in 1 ... 4 {
+    p.addLine(distance: 360)
+    p.turn(degrees: 90)
+    
+}
+
+p.goToOrigin()
+p.turn(degrees: -90)
+
+p.goto(dx: -300, dy: 340)
+p.addLine(distance: 680)
+p.goto(dx: 40, dy: 680)
+p.addLine(distance: 680)
+p.goto(dx: 40, dy: 680)
+p.addLine(distance: 680)
+p.goto(dx: 40, dy: 680)
+p.addLine(distance: 680)
 
 
+p.goto(dx: 40, dy: 680)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
 
+p.addLine(distance: 680)
+p.goto(dx: 40, dy: 680)
+p.addLine(distance: 680)
 
+p.goToOrigin()
+
+p.goto(dx: -140, dy: -180)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
+p.addLine(distance: 160)
+p.goto(dx: 40, dy: 160)
 /*:
  ## Show the Live View
  Don't see any results?
