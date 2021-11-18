@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 1000
-let preferredHeight = 700
+let preferredWidth = 360
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -40,12 +40,9 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 10, color: .black)
 
 /*:
  ## Add your code
@@ -57,154 +54,33 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  */
 
 // Begin writing your code below (you can remove the examples shown)
-func MovePen() {
-    p.goto(dx: -20, dy: -20)
-}
+
 // Go back to origin
 p.goToOrigin()
 
-//Start Optical Illusion in Middle
-canvas.drawEllipse(at: Point(x: 0, y: 0), width: 15, height: 15)
 
-p.goto(dx: -20, dy: -20)
-
-//Square 1
-for i in 1 ... 4 {
-    p.addLine(distance: 40)
-    p.turn(degrees: 90)
-}
-
-MovePen()
-
-//Square 2
-for i in 1 ... 4 {
-    p.addLine(distance: 80)
-    p.turn(degrees: 90)
+//Grass
+for x in stride(from: 1,
+                to: 360,
+                by: 1){
     
-}
-
-MovePen()
-
-//Square 3
-for i in 1 ... 4 {
-    p.addLine(distance: 120)
-    p.turn(degrees: 90)
+    //Set the Color
+    let currentColor = Color(hue: 120,
+                             saturation: 80,
+                             brightness: 100,
+                             alpha: 100)
     
-}
-
-MovePen()
-
-//Square 4
-for i in 1 ... 4 {
-    p.addLine(distance: 160)
-    p.turn(degrees: 90)
+    canvas.lineColor = currentColor
     
-}
-
-MovePen()
-
-//Square 5
-for i in 1 ... 4 {
-    p.addLine(distance: 200)
-    p.turn(degrees: 90)
     
-}
-
-MovePen()
-
-//Square 6
-for i in 1 ... 4 {
-    p.addLine(distance: 240)
-    p.turn(degrees: 90)
-    
-}
-
-MovePen()
-
-//Square 7
-for i in 1 ... 4 {
-    p.addLine(distance: 280)
-    p.turn(degrees: 90)
-    
-}
-
-MovePen()
-
-//Square 8
-for i in 1 ... 4 {
-    p.addLine(distance: 320)
-    p.turn(degrees: 90)
+    //Draw the Lines
+    x
+    canvas.drawLine(from: Point(x: x, y: 1),
+            to: Point(x: x, y: 120))
     
 }
 
 
-MovePen()
-
-//Square 9
-for i in 1 ... 4 {
-    p.addLine(distance: 360)
-    p.turn(degrees: 90)
-    
-}
-
-p.goToOrigin()
-p.turn(degrees: -90)
-
-p.goto(dx: -300, dy: 340)
-p.addLine(distance: 680)
-p.goto(dx: 40, dy: 680)
-p.addLine(distance: 680)
-p.goto(dx: 40, dy: 680)
-p.addLine(distance: 680)
-p.goto(dx: 40, dy: 680)
-p.addLine(distance: 680)
-
-
-p.goto(dx: 40, dy: 680)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-
-p.addLine(distance: 680)
-p.goto(dx: 40, dy: 680)
-p.addLine(distance: 680)
-
-p.goToOrigin()
-
-p.goto(dx: -140, dy: -180)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
-p.addLine(distance: 160)
-p.goto(dx: 40, dy: 160)
 /*:
  ## Show the Live View
  Don't see any results?
