@@ -59,15 +59,16 @@ canvas.drawAxes(withScale: true, by: 10, color: .black)
 p.goToOrigin()
 
 
-//Grass
+//"Grass"
+
 for x in stride(from: 1,
-                to: 360,
+                through: 360,
                 by: 1){
     
     //Set the Color
     let currentColor = Color(hue: 120,
                              saturation: 80,
-                             brightness: 100,
+                             brightness: 80,
                              alpha: 100)
     
     canvas.lineColor = currentColor
@@ -79,6 +80,52 @@ for x in stride(from: 1,
             to: Point(x: x, y: 120))
     
 }
+
+//"Sky"
+for x in stride(from: 1,
+                through: 360,
+                by: 1){
+    
+    
+    //Set the Color
+    let currentColor = Color(hue: 240,
+                             saturation: 80,
+                             brightness: 80,
+                             alpha: 100)
+    
+    canvas.lineColor = currentColor
+    
+    //Draw the Lines
+    x
+canvas.drawLine(from: Point(x: x, y: 121),
+                to: Point(x: x, y: 600))
+    
+    
+    
+}
+
+
+//Panda Eyes
+canvas.fillColor = Color(hue: 360,
+                        saturation: 80,
+                        brightness: 0,
+                        alpha: 100)
+
+
+canvas.drawEllipse(at: Point(x: 160, y: 360),
+                   width: 30,
+                   height: 40)
+
+
+canvas.fillColor = Color(hue: 360,
+                        saturation: 80,
+                        brightness: 0,
+                        alpha: 100)
+
+
+canvas.drawEllipse(at: Point(x: 230, y: 360),
+                   width: 30,
+                   height: 40)
 
 
 /*:
