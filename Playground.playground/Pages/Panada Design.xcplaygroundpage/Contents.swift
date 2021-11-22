@@ -58,75 +58,53 @@ canvas.drawAxes(withScale: true, by: 10, color: .black)
 // Go back to origin
 p.goToOrigin()
 
+//Panda Ears
+canvas.fillColor = .black
 
-//"Grass"
+canvas.drawEllipse(at: Point(x: 140, y: 390),
+                   width: 60,
+                   height: 60)
 
-for x in stride(from: 1,
-                through: 360,
-                by: 1){
-    
-    //Set the Color
-    let currentColor = Color(hue: 120,
-                             saturation: 80,
-                             brightness: 80,
-                             alpha: 100)
-    
-    canvas.lineColor = currentColor
-    
-    
-    //Draw the Lines
-    x
-    canvas.drawLine(from: Point(x: x, y: 1),
-            to: Point(x: x, y: 120))
-    
-}
 
-//"Sky"
-for x in stride(from: 1,
-                through: 360,
-                by: 1){
-    
-    
-    //Set the Color
-    let currentColor = Color(hue: 240,
-                             saturation: 80,
-                             brightness: 80,
-                             alpha: 100)
-    
-    canvas.lineColor = currentColor
-    
-    //Draw the Lines
-    x
-canvas.drawLine(from: Point(x: x, y: 121),
-                to: Point(x: x, y: 600))
-    
-    
-    
-}
+canvas.drawEllipse(at: Point(x: 230, y: 390),
+                   width: 60,
+                   height: 60)
+
+
+//Circle of Head
+
+canvas.fillColor = .white
+
+canvas.borderColor = .black
+
+canvas.drawEllipse(at: Point(x: 185, y: 340), width: 150, height: 150)
 
 
 //Panda Eyes
-canvas.fillColor = Color(hue: 360,
-                        saturation: 80,
-                        brightness: 0,
-                        alpha: 100)
 
+canvas.fillColor = .black
 
-canvas.drawEllipse(at: Point(x: 160, y: 360),
+canvas.drawEllipse(at: Point(x: 150, y: 360),
                    width: 30,
                    height: 40)
 
 
-canvas.fillColor = Color(hue: 360,
-                        saturation: 80,
-                        brightness: 0,
-                        alpha: 100)
-
-
-canvas.drawEllipse(at: Point(x: 230, y: 360),
+canvas.drawEllipse(at: Point(x: 220, y: 360),
                    width: 30,
                    height: 40)
 
+//Panda Eyes (Pupils)
+
+canvas.fillColor = .white
+
+canvas.drawEllipse(at: Point(x: 150, y: 365),
+                   width: 10,
+                   height: 10)
+
+
+canvas.drawEllipse(at: Point(x: 220, y: 365),
+                   width: 10,
+                   height: 10)
 
 /*:
  ## Show the Live View

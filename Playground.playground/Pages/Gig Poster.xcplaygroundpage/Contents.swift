@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -40,9 +40,6 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
@@ -58,20 +55,42 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+canvas.highPerformance = true
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
 
-// Go back to origin
-p.goToOrigin()
+//Background Color
 
-// Change the pen color
-p.penColor = .red
+for x in stride(from: 1,
+                through: 400,
+                by: 1){
+    
+    
+    //Set the Color
+    let currentColor = Color(hue: 200 ,
+                             saturation: 100,
+                             brightness: 190,
+                             alpha: 100)
+    
+    canvas.lineColor = currentColor
+    
+    //Draw the Lines
+    x
+canvas.drawLine(from: Point(x: x, y: 1),
+                to: Point(x: x, y: 600))
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+
+}
+    
+canvas.highPerformance = false
+
+
+
+
+
+
+
+
+
 
 /*:
  ## Show the Live View

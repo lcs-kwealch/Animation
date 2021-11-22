@@ -6,6 +6,8 @@
  */
 let preferredWidth = 600
 let preferredHeight = 600
+// Draw a curve, down and to the right
+p.addArc(radius: 50, angle: -360)
 /*:
  ## Required code
  
