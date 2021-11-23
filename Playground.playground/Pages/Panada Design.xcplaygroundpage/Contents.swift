@@ -94,6 +94,53 @@ canvas.drawEllipse(at: Point(x: 240, y: 100),
                    width: 80,
                    height: 80)
 
+//Panda Paws
+
+canvas.fillColor = .white
+
+//Left
+canvas.drawEllipse(at: Point(x: 95, y: 103),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 105, y: 120),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 125, y: 123),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 140, y: 110),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 120, y: 90),
+                   width: 15,
+                   height: 25)
+
+
+
+//Right
+canvas.drawEllipse(at: Point(x: 220, y: 103),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 230, y: 120),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 250, y: 123),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 265, y: 110),
+                   width: 15,
+                   height: 15)
+
+canvas.drawEllipse(at: Point(x: 242, y: 90),
+                   width: 15,
+                   height: 25)
 
 
 
@@ -112,15 +159,37 @@ canvas.drawEllipse(at: Point(x: 185, y: 340), width: 150, height: 150)
 
 canvas.fillColor = .black
 
+
 //Right
-canvas.drawEllipse(at: Point(x: 270, y: 250),
+
+//Turn Canvas
+
+canvas.translate(to: Point(x: 270, y: 250))
+canvas.rotate(by: 30)
+
+
+canvas.drawEllipse(at: Point(x: 0, y: -10),
                    width: 60,
                    height: 120)
 
+canvas.rotate(by: -30)
+canvas.translate(to: Point(x: -270, y: -250))
+
+
 //Left
-canvas.drawEllipse(at: Point(x: 100, y: 250),
+
+//Turn Canvas
+
+canvas.translate(to: Point(x: 100, y: 250))
+canvas.rotate(by: 330)
+
+
+canvas.drawEllipse(at: Point(x: 0, y: -10),
                    width: 60,
                    height: 120)
+
+canvas.rotate(by: -330)
+canvas.translate(to: Point(x: -100, y: -250))
 
 
 
@@ -159,3 +228,10 @@ canvas.fillColor = .black
 canvas.drawEllipse(at: Point(x: 185, y: 330),
                    width: 30,
                    height: 25)
+
+//Panda Mouth
+
+p.penColor = .black
+
+p.goto(dx: 185, dy: 280)
+p.addArc(radius: 35, angle: 45)

@@ -4,10 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
-let preferredHeight = 600
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -360)
+let preferredWidth = 700
+let preferredHeight = 300
 /*:
  ## Required code
  
@@ -18,6 +16,7 @@ p.addArc(radius: 50, angle: -360)
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
+import CoreGraphics
 
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
@@ -42,12 +41,9 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 100, color: .black)
 
 /*:
  ## Add your code
@@ -61,19 +57,27 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 // Begin writing your code below (you can remove the examples shown)
 
 // Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
 
-// Go back to origin
-p.goToOrigin()
+//Loop that states at 0 and goes up by 100, ending at 700
+for xPosition in stride(from: 0,
+                        through: 700,
+                        by: 100){
+    
+//Green or Red?
+    
+        if xPosition > 300 {
+            canvas.lineColor = .green
+    
+} else {
+    canvas.lineColor = .red
 
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+}
+//Draw the Lines
+    canvas.drawLine(from: Point(x: xPosition, y: 0),
+                    to: Point(x: xPosition, y: 300))
+    
+}
 
 /*:
  ## Show the Live View
