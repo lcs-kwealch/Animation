@@ -61,14 +61,40 @@ p.goToOrigin()
 //Panda Ears
 canvas.fillColor = .black
 
+//Left
 canvas.drawEllipse(at: Point(x: 140, y: 390),
                    width: 60,
                    height: 60)
 
-
+//Right
 canvas.drawEllipse(at: Point(x: 230, y: 390),
                    width: 60,
                    height: 60)
+
+//Panda Body
+
+canvas.fillColor = .white
+canvas.drawShapesWithBorders = true
+
+canvas.drawEllipse(at: Point(x: 185, y: 200),
+                   width: 230,
+                   height: 250)
+
+//Panda Feet
+
+canvas.fillColor = .black
+
+//Left
+canvas.drawEllipse(at: Point(x: 120, y: 100),
+                   width: 80,
+                   height: 80)
+
+//Right
+canvas.drawEllipse(at: Point(x: 240, y: 100),
+                   width: 80,
+                   height: 80)
+
+
 
 
 //Circle of Head
@@ -77,18 +103,37 @@ canvas.fillColor = .white
 
 canvas.borderColor = .black
 
+canvas.drawShapesWithBorders = true
+
 canvas.drawEllipse(at: Point(x: 185, y: 340), width: 150, height: 150)
+
+
+//Panda Arms
+
+canvas.fillColor = .black
+
+//Right
+canvas.drawEllipse(at: Point(x: 270, y: 250),
+                   width: 60,
+                   height: 120)
+
+//Left
+canvas.drawEllipse(at: Point(x: 100, y: 250),
+                   width: 60,
+                   height: 120)
+
 
 
 //Panda Eyes
 
 canvas.fillColor = .black
 
+//Left
 canvas.drawEllipse(at: Point(x: 150, y: 360),
                    width: 30,
                    height: 40)
 
-
+//Right
 canvas.drawEllipse(at: Point(x: 220, y: 360),
                    width: 30,
                    height: 40)
@@ -97,27 +142,20 @@ canvas.drawEllipse(at: Point(x: 220, y: 360),
 
 canvas.fillColor = .white
 
+//Left
 canvas.drawEllipse(at: Point(x: 150, y: 365),
                    width: 10,
                    height: 10)
 
-
+//Right
 canvas.drawEllipse(at: Point(x: 220, y: 365),
                    width: 10,
                    height: 10)
 
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
+//Panda Nose
 
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+canvas.fillColor = .black
+
+canvas.drawEllipse(at: Point(x: 185, y: 330),
+                   width: 30,
+                   height: 25)
