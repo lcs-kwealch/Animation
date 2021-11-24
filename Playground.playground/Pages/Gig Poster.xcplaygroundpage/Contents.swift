@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -42,54 +42,52 @@ PlaygroundPage.current.liveView = canvas
 
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // Begin writing your code below (you can remove the examples shown)
 
-canvas.highPerformance = true
+//Draw Black Rectangle
 
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 
-//Background Color
+//Draw Outside Green Circles
 
-for x in stride(from: 1,
-                through: 400,
-                by: 1){
+for horrizontalPosition in stride(from: 0,
+                                  through: 400,
+                                  by: 40){
     
-    
-    //Set the Color
-    let currentColor = Color(hue: 200 ,
-                             saturation: 100,
-                             brightness: 190,
-                             alpha: 100)
-    
-    canvas.lineColor = currentColor
-    
-    //Draw the Lines
-    x
-canvas.drawLine(from: Point(x: x, y: 1),
-                to: Point(x: x, y: 600))
-
-
+    for verticalPosition in stride(from: 0,
+                                   through: 400,
+                                   by: 40){
+        
+        
+        if horrizontalPosition == 0 ||
+            horrizontalPosition == 400 ||
+            verticalPosition == 0 ||
+            verticalPosition == 400{
+            
+            canvas.fillColor = .green
+            
+        } else {
+            canvas.fillColor = .white
+        }
+        
+        
+        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 36, height: 36)
+        
+        
+        
+    }
 }
-    
-canvas.highPerformance = false
-
-
-
-
-
-
-
-
 
 
 /*:
@@ -99,7 +97,7 @@ canvas.highPerformance = false
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  

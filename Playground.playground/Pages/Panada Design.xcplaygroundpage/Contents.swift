@@ -58,6 +58,58 @@ canvas.drawAxes(withScale: true, by: 10, color: .black)
 // Go back to origin
 p.goToOrigin()
 
+//Background Color
+
+//Blue
+
+for x in stride(from: 1,
+                through: 360,
+                by: 1){
+    
+    
+    //Set the Color
+    let currentColor = Color(hue: 240 ,
+                             saturation: 100,
+                             brightness: 100,
+                             alpha: 100)
+    
+    canvas.lineColor = currentColor
+    
+    //Draw the Lines
+    x
+canvas.drawLine(from: Point(x: x, y: 0),
+                to: Point(x: x, y: 600))
+
+
+}
+
+
+
+
+
+
+
+//Draw Bamboo Sticks
+
+for xPosition in stride(from: 40,
+                        through: 360,
+                        by: 40){
+    
+    xPosition
+    canvas.fillColor = .green
+    canvas.drawRectangle(at: Point(x: xPosition, y: 0),
+                         width: 10,
+                         height: 600)
+    
+    
+}
+
+
+
+
+
+
+
 //Panda Ears
 canvas.fillColor = .black
 
@@ -235,3 +287,4 @@ p.penColor = .black
 
 p.goto(dx: 185, dy: 280)
 p.addArc(radius: 35, angle: 45)
+

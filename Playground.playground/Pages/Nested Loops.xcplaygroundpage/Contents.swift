@@ -68,6 +68,9 @@ for verticalPosition in stride(from: 25,
                                      through: 475,
                                      by: 50){
         
+        horrizonalPosition
+        
+        verticalPosition
     canvas.drawEllipse(at: Point(x: horrizonalPosition, y: verticalPosition),
                            width: 50,
                            height: 50)
