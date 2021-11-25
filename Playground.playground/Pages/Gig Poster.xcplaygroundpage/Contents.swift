@@ -59,16 +59,17 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 
-//Draw Outside Green Circles
+//Draw Outside Green Circles plus white inside circles
+
 
 for horrizontalPosition in stride(from: 0,
                                   through: 400,
                                   by: 40){
+    canvas.fillColor = .white
     
     for verticalPosition in stride(from: 0,
                                    through: 400,
                                    by: 40){
-        
         
         if horrizontalPosition == 0 ||
             horrizontalPosition == 400 ||
@@ -78,16 +79,31 @@ for horrizontalPosition in stride(from: 0,
             canvas.fillColor = .green
             
         } else {
-            canvas.fillColor = .white
+            if verticalPosition > horrizontalPosition{
+                
+                canvas.fillColor = .green
+                
+                
+            } else{
+                
+                canvas.fillColor = .white
+            }
         }
         
+        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 40, height: 40)
+    
         
-        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 36, height: 36)
-        
-        
-        
-    }
+        }
+    
 }
+
+
+//Draw Green Rectangle
+
+canvas.fillColor = .green
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
+
 
 
 /*:

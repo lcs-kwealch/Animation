@@ -57,21 +57,30 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  */
 
 // Begin writing your code below (you can remove the examples shown)
-
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
-
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
-
-// Go back to origin
-p.goToOrigin()
-
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+for horrizontalPosition in stride(from: 0,
+                                  through: 400,
+                                  by: 40){
+    
+    for verticalPosition in stride(from: 0,
+                                   through: 400,
+                                   by: 40){
+        
+        
+        if horrizontalPosition == 0 ||
+            horrizontalPosition == 400 ||
+            verticalPosition == 0 ||
+            verticalPosition == 400{
+            
+            canvas.fillColor = .green
+            
+        } else {
+            canvas.fillColor = .white
+        }
+        
+        }
+        
+}
+        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 36, height: 36)
 
 /*:
  ## Show the Live View
