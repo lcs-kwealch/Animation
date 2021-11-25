@@ -62,46 +62,64 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 //Draw Outside Green Circles plus white inside circles
 
 
-for horrizontalPosition in stride(from: 0,
-                                  through: 400,
-                                  by: 40){
+for horizontalPosition in stride(from: 0,
+                                 through: 400,
+                                 by: 40){
     canvas.fillColor = .white
     
     for verticalPosition in stride(from: 0,
                                    through: 400,
                                    by: 40){
         
-        if horrizontalPosition == 0 ||
-            horrizontalPosition == 400 ||
+        if horizontalPosition == 0 ||
+            horizontalPosition == 400 ||
             verticalPosition == 0 ||
-            verticalPosition == 400{
+            verticalPosition == 400 ||
+            horizontalPosition + verticalPosition > 400{
             
+            canvas.highPerformance = true
             canvas.fillColor = .green
             
         } else {
-            if verticalPosition > horrizontalPosition{
-                
-                canvas.fillColor = .green
-                
-                
-            } else{
-                
-                canvas.fillColor = .white
-            }
+            
+            
+            canvas.fillColor = .white
+            
+            
+            
+            
+            
         }
         
-        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 40, height: 40)
-    
+        canvas.drawEllipse(at: Point(x: horizontalPosition, y: verticalPosition), width: 40, height: 40)
         
-        }
-    
+        canvas.drawText(message: "(\(horizontalPosition), \(verticalPosition))",
+                        at: Point(x: horizontalPosition - 20,
+                                  y: verticalPosition),
+                        size: 9)
+        
+    }
 }
+canvas.highPerformance = false
 
 
 //Draw Green Rectangle
 
 canvas.fillColor = .green
 canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
+//Pixies Title
+canvas.drawText(message: "pixies",
+                at: Point(x: 10,
+                          y: 410),
+                size: 50)
+
+
+//Date and Time
+canvas.drawText(message: "pixies",
+                at: Point(x: 10,
+                          y: 410),
+                size: 50)
 
 
 
