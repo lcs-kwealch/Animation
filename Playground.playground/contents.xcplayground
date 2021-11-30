@@ -5,10 +5,9 @@
         <page name='Tortoise Examples'/>
         <page name='Panada Design'/>
         <page name='Nested Loops'/>
-        <page name='Gig Poster'/>
+        <page name='Gig Poster #1'/>
         <page name='Conditonal Statements'/>
-        <page name='Empty Canvas 7'/>
-        <page name='Empty Canvas 8'/>
+        <page name='Gig Poster #2'/>
         <page name='Empty Canvas 9'/>
         <page name='Empty Canvas 10'/>
         <page name='Empty Canvas 11'/>
@@ -18,5 +17,6 @@
         <page name='Empty Canvas 15'/>
         <page name='Blank canvas to copy'/>
         <page name='Line Curve Example'/>
+        <page name='Practice turing Graph'/>
     </pages>
 </playground>

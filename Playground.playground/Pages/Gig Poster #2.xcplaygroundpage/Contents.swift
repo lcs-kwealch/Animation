@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -40,12 +40,9 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
  ## Add your code
@@ -57,30 +54,7 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  */
 
 // Begin writing your code below (you can remove the examples shown)
-for horrizontalPosition in stride(from: 0,
-                                  through: 400,
-                                  by: 40){
-    
-    for verticalPosition in stride(from: 0,
-                                   through: 400,
-                                   by: 40){
-        
-        
-        if horrizontalPosition == 0 ||
-            horrizontalPosition == 400 ||
-            verticalPosition == 0 ||
-            verticalPosition == 400{
-            
-            canvas.fillColor = .green
-            
-        } else {
-            canvas.fillColor = .white
-        }
-        
-        }
-        
-}
-        canvas.drawEllipse(at: Point(x: horrizontalPosition, y: verticalPosition), width: 36, height: 36)
+
 
 /*:
  ## Show the Live View

@@ -93,10 +93,6 @@ for horizontalPosition in stride(from: 0,
         
         canvas.drawEllipse(at: Point(x: horizontalPosition, y: verticalPosition), width: 40, height: 40)
         
-        canvas.drawText(message: "(\(horizontalPosition), \(verticalPosition))",
-                        at: Point(x: horizontalPosition - 20,
-                                  y: verticalPosition),
-                        size: 9)
         
     }
 }
@@ -109,17 +105,68 @@ canvas.fillColor = .green
 canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
 
 //Pixies Title
+
 canvas.drawText(message: "pixies",
                 at: Point(x: 10,
                           y: 410),
-                size: 50)
+                size: 70)
 
 
 //Date and Time
-canvas.drawText(message: "pixies",
+
+canvas.drawText(message: "saturday",
                 at: Point(x: 10,
-                          y: 410),
-                size: 50)
+                          y: 555),
+                size: 10)
+
+canvas.drawText(message: "december 13 1986",
+                at: Point(x: 10,
+                          y: 540),
+                size: 10)
+
+canvas.drawText(message: "9 pm over 21",
+                at: Point(x: 10,
+                          y: 525),
+                size: 10)
+
+
+//Place/Address
+
+canvas.drawText(message: "at the rat",
+                at: Point(x: 270,
+                          y: 555),
+                size: 10)
+
+canvas.drawText(message: "528 commonwealth",
+                at: Point(x: 270,
+                          y: 540),
+                size: 10)
+
+canvas.drawText(message: "boston, mass.",
+                at: Point(x: 270,
+                          y: 525),
+                size: 10)
+
+
+canvas.textColor = .white
+
+//Concert With...
+
+canvas.drawText(message: "with",
+                at: Point(x: 270,
+                          y: 455),
+                size: 15)
+
+canvas.drawText(message: "throwing muses",
+                at: Point(x: 270,
+                          y: 440),
+                size: 15)
+
+canvas.drawText(message: "big dipper",
+                at: Point(x: 270,
+                          y: 425),
+                size: 15)
+
 
 
 
