@@ -1,7 +1,7 @@
 //: [Previous](@previous) / [Next](@next)
 
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -50,9 +50,9 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // Begin writing your code below (you can remove the examples shown)
@@ -70,33 +70,46 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
 for xPosition in stride(from: 0,
-                        through: 350,
+                        through: 400,
                         by: 44.44){
     
     for yPosition in stride(from: 0,
                             through: 550,
                             by: 44.44){
         
-        let currentColor = Color(hue: 82,
-                                 saturation: 5,
-                                 brightness: 88,
-                                 alpha: 100)
-
-        canvas.fillColor = currentColor
+        // Print statement that shows the difference of the y and x position
+                canvas.drawText(message: "\(Int(yPosition - xPosition))",
+                                at: Point(x: Int(xPosition) - 20,
+                                                  y: Int(yPosition)),
+                                        size: 11)
+        
+       
+        
         
         var triangleVerticies: [Point] = []
         triangleVerticies.append(Point(x: xPosition + 44, y: yPosition + 200 )) //A
         triangleVerticies.append(Point(x:xPosition + 44, y:yPosition + 244 )) //B
         triangleVerticies.append(Point(x:xPosition + 0, y:yPosition + 200 )) //C
         
-        canvas.drawCustomShape(with: triangleVerticies)
+        
+        
+        if yPosition - xPosition > 0{
+    
+            canvas.fillColor = .white
+            
+            
+        }else{
+           
+            canvas.fillColor = .yellow
+            
+            
+            canvas.drawCustomShape(with: triangleVerticies)
+        }
+        
         
         
     }
-
 }
-
-
 
 
 
@@ -106,14 +119,14 @@ for xPosition in stride(from: 0,
 canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
-
+ 
  ## Show the Live View
  Don't see any results?
  
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  

@@ -55,6 +55,16 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+extension Canvas {
+func drawtiltedrectangle(xPosition: Int, yPosition: Int) {
+var rectanglevertices: [Point] = []
+rectanglevertices.append(Point(x: xPosition + 0, y: yPosition + 30)) //A
+rectanglevertices.append(Point(x: xPosition + 20, y: yPosition + 50)) //B
+rectanglevertices.append(Point(x: xPosition + 50, y: yPosition + 20)) //C
+rectanglevertices.append(Point(x: xPosition + 30, y: yPosition + 0)) //D
+canvas.drawCustomShape(with: rectanglevertices)
+
+    canvas.fillColor = .blue
 
 //Custom Shape with Absolute Co-ordinates
 //Make a list of Points
@@ -88,19 +98,11 @@ for xPosition in stride(from: 0,
         //Draw tilted Rectangle
         
         canvas.fillColor = .blue
-        
-        var rectangleVerticies: [Point] = []
-        rectangleVerticies.append(Point(x: xPosition+0, y:yPosition+30 )) //A
-        rectangleVerticies.append(Point(x: xPosition+20, y:yPosition+50 )) //B
-        rectangleVerticies.append(Point(x: xPosition+50, y:yPosition+20 )) //C
-        rectangleVerticies.append(Point(x: xPosition+30, y:yPosition+0 )) //D
-        
-        canvas.drawCustomShape(with: rectangleVerticies)
-        
-    }
-    
-}
 
+    }
+}
+}
+}
 
 
 
