@@ -42,9 +42,9 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-
 // Show a grid
 canvas.drawAxes(withScale: true, by: 50, color: .black)
+
 
 /*:
  ## Add your code
@@ -67,7 +67,7 @@ canvas.fillColor = currentColor
 
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-
+//Make loop to draw triangles
 
 for xPosition in stride(from: 0,
                         through: 400,
@@ -76,47 +76,82 @@ for xPosition in stride(from: 0,
     for yPosition in stride(from: 0,
                             through: 550,
                             by: 44.44){
-        
-        // Print statement that shows the difference of the y and x position
-                canvas.drawText(message: "\(Int(yPosition - xPosition))",
-                                at: Point(x: Int(xPosition) - 20,
-                                                  y: Int(yPosition)),
-                                        size: 11)
-        
-       
-        
-        
-        var triangleVerticies: [Point] = []
-        triangleVerticies.append(Point(x: xPosition + 44, y: yPosition + 200 )) //A
-        triangleVerticies.append(Point(x:xPosition + 44, y:yPosition + 244 )) //B
-        triangleVerticies.append(Point(x:xPosition + 0, y:yPosition + 200 )) //C
-        
-        
+      
         
         if yPosition - xPosition > 0{
-    
-            canvas.fillColor = .white
+            
+            //White Triangles
+            canvas.fillColor = Color(hue: 82,
+                                     saturation: 5,
+                                     brightness: 88,
+                                     alpha: 100)
             
             
         }else{
-           
-            canvas.fillColor = .yellow
+            //Yellow Triangles
+            let currentColor = Color(hue: 46,
+                                     saturation: 81,
+                                     brightness: 97,
+                                     alpha: 100)
+            canvas.fillColor = currentColor
+
             
-            
-            canvas.drawCustomShape(with: triangleVerticies)
         }
         
+        //Draw Triangles
         
+        var triangleVerticies: [Point] = []
+               triangleVerticies.append(Point(x: xPosition + 44, y: yPosition + 200 )) //A
+               triangleVerticies.append(Point(x:xPosition + 44, y:yPosition + 244 )) //B
+               triangleVerticies.append(Point(x:xPosition + 0, y:yPosition + 200 )) //C
+               
+               canvas.drawCustomShape(with: triangleVerticies)
         
     }
 }
 
+canvas.textColor = .white
+
+//Text with same x co-cordinate being 20
+
+canvas.drawText(message: "talking heads",
+                at: Point(x: 20,
+                          y: 140),
+                size: 40)
+
+canvas.drawText(message: "friday, saturday, sunday",
+                at: Point(x: 20,
+                          y: 30),
+                size: 8)
+
+canvas.drawText(message: "september 12, 13, 14, 1975",
+                at: Point(x: 20,
+                          y: 15),
+                size: 8)
+
+//Text with same y co-ordinate
+
+canvas.drawText(message: "at cbgb and omfug",
+                at: Point(x: 150,
+                          y: 30),
+                size: 8)
+
+canvas.drawText(message: "315 bowery, new york city",
+                at: Point(x: 150,
+                          y: 15),
+                size: 8)
+
+canvas.drawText(message: "also appearing:",
+                at: Point(x: 280,
+                          y: 30),
+                size: 8)
+
+canvas.drawText(message: "from brooklyn, the shirts",
+                at: Point(x: 280,
+                          y: 15),
+                size: 8)
 
 
-
-
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
  
