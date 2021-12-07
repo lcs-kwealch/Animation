@@ -323,7 +323,7 @@ canvas.drawText(message: "the runaways",
                 size: 55)
 
 
-//Details
+//Details Group 1
 canvas.textColor = .black
 
 canvas.drawText(message: "friday",
@@ -341,7 +341,7 @@ canvas.drawText(message: "tickets $4.50",
                           y: 525),
                 size: 10)
 
-
+//Group 2
 
 canvas.drawText(message: "with",
                 at: Point(x: 120,
@@ -359,7 +359,7 @@ canvas.drawText(message: "wolfgang",
                 size: 10)
 
 
-
+//Group 3
 
 canvas.drawText(message: "at ben h. lewis hall",
                 at: Point(x: 290,
