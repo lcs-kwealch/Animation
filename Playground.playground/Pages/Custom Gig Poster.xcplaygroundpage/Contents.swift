@@ -59,7 +59,7 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
 //Background Rectangle
 let currentColor = Color(hue: 323,
                          saturation: 93,
-                         brightness: 100,
+                         brightness: 70,
                          alpha: 100)
 canvas.fillColor = currentColor
 
@@ -76,91 +76,168 @@ for xPosition in stride(from: 0,
     
     
     if xPosition == 0{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 25{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 50{
-        canvas.fillColor = .green
+        let currentColor = Color(hue: 120,
+                                 saturation: 67,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 75{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 100{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 125{
-        canvas.fillColor = .green
+        let currentColor = Color(hue: 120,
+                                 saturation: 67,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 150{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 175{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 200{
-        canvas.fillColor = .green
+        let currentColor = Color(hue: 120,
+                                 saturation: 67,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 225{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 250{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 275{
-        canvas.fillColor = .green
+        let currentColor = Color(hue: 120,
+                                 saturation: 67,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 300{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 325{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 350{
-        canvas.fillColor = .green
+        let currentColor = Color(hue: 120,
+                                 saturation: 67,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 375{
-        canvas.fillColor = .red
+        let currentColor = Color(hue: 235,
+                                 saturation: 57,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }else if xPosition == 400{
-        canvas.fillColor = .blue
+        let currentColor = Color(hue: 0,
+                                 saturation: 66,
+                                 brightness: 80,
+                                 alpha: 100)
+        canvas.fillColor = currentColor
         
     }
     
-    
+    //Actually Drawing Lines
     canvas.drawRectangle(at: Point(x: xPosition, y: 0),
                          width: 23,
                          height: 400)
 }
 
-
-
-
-
 //Horrizontal Rectangle
 
+let orange = Color(hue: 27,
+                   saturation: 66,
+                   brightness: 90,
+                   alpha: 100)
+canvas.fillColor = orange
 
-canvas.fillColor = .orange
-canvas.drawRectangle(at: Point(x: 0, y: 100), width: 400, height: 200)
+canvas.drawRectangle(at: Point(x: 0, y: 100), width: 400, height: 225)
 
 canvas.fillColor = .blue
 
-var crossVerticies: [Point] = []
-crossVerticies.append(Point(x: 175, y: 275)) //A
-crossVerticies.append(Point(x: 225, y: 275)) //B
-crossVerticies.append(Point(x: 225, y: 225)) //C
-crossVerticies.append(Point(x: 275, y: 225)) //D
-crossVerticies.append(Point(x: 275, y: 175)) //E
-crossVerticies.append(Point(x: 225, y: 175)) //F
-crossVerticies.append(Point(x: 225, y: 125)) //G
-crossVerticies.append(Point(x: 175, y: 125)) //H
-crossVerticies.append(Point(x: 175, y: 175)) //I
-crossVerticies.append(Point(x: 125, y: 175)) //J
-crossVerticies.append(Point(x: 125, y: 225)) //K
-crossVerticies.append(Point(x: 175, y: 225)) //L
-canvas.drawCustomShape(with: crossVerticies)
+//Cross
+canvas.drawRectangle(at: Point(x: 125, y: 200),
+                     width: 150,
+                     height: 50)
 
+canvas.drawRectangle(at: Point(x: 175, y: 125),
+                     width: 50,
+                     height: 175)
+
+//Diamonds Beside Cross #1
+var diamondVerticies: [Point] = []
+diamondVerticies.append(Point(x: 350, y: 275)) //A
+diamondVerticies.append(Point(x: 400, y: 225)) //B
+diamondVerticies.append(Point(x: 350, y: 175)) //C
+diamondVerticies.append(Point(x: 300, y: 225)) //D
+canvas.drawCustomShape(with: diamondVerticies)
+
+//Diamonds Beside Cross #2
+var squareVerticies: [Point] = []
+squareVerticies.append(Point(x: 50, y: 275)) //A
+squareVerticies.append(Point(x: 100, y: 225)) //B
+squareVerticies.append(Point(x: 50, y: 175)) //C
+squareVerticies.append(Point(x: 0, y: 225)) //D
+canvas.drawCustomShape(with: squareVerticies)
 
 //Title
 canvas.textColor = .white
@@ -171,45 +248,30 @@ canvas.drawText(message: "kanye west",
 
 //Details Group 1
 
-canvas.drawText(message: "june 5, 2005",
-                at: Point(x: 50,
+canvas.drawText(message: "october 15, 2016",
+                at: Point(x: 40,
                           y: 550),
                 size: 10)
 
 //Group 2
 
-canvas.drawText(message: "with",
-                at: Point(x: 175,
+canvas.drawText(message: "rogers place",
+                at: Point(x: 160,
                           y: 550),
                 size: 10)
 
-canvas.drawText(message: "special guest",
-                at: Point(x: 175,
-                          y: 538),
-                size: 10)
-
-canvas.drawText(message: "jay-z",
-                at: Point(x: 175,
-                          y: 526),
-                size: 10)
 
 //Group 3
 
-canvas.drawText(message: "east rutherford",
-                at: Point(x: 300,
+canvas.drawText(message: "edmonton, alberta",
+                at: Point(x: 270,
                           y: 550),
                 size: 10)
 
-canvas.drawText(message: "new jersey",
-                at: Point(x: 300,
+canvas.drawText(message: "canada",
+                at: Point(x: 270,
                           y: 538),
                 size: 10)
-
-
-
-
-// Show a grid
-canvas.drawAxes(withScale: true, by: 25, color: .black)
 /*:
  ## Show the Live View
  Don't see any results?
